@@ -1,0 +1,13 @@
+CC=/opt/centos/devtoolset-1.1/root/usr/bin/g++
+CFLAGS=-Wall -g -std=c++11
+
+all: prob2
+
+prob2: prob2.cc
+	$(CC) $(CFLAGS) -o $@ $^
+clean:
+	rm -rf *~ *.o
+
+clean-all: clean
+	rm -rf prob2
+
